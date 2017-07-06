@@ -12,7 +12,7 @@ class StringGenerator(object):
           <body>
             <form method="get" action="generate">
               <input type="text" value="8" name="length" />
-              <button type="submit">Give it now!</button>
+              <button type="submit">Give it now.</button>
             </form>
           </body>
         </html>"""
