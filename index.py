@@ -14,7 +14,7 @@ class calculadora(object):
               <input type="text" name="operador1" />
               +
               <input type="text" name="operador2" />
-              <button type="submit">Soma tetsyutsytuys</button>
+              <button type="submit">Soma</button>
             </form>
           </body>
         </html>"""
