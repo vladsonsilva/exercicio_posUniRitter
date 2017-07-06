@@ -11,10 +11,10 @@ class StringGenerator(object):
           <head></head>
           <body>
             <form method="get" action="soma">
-              <input type="text" value="3" name="operador1" />
+              <input type="text" name="operador1" />
               +
-              <input type="text" value="3" name="operador2" />
-              <button type="submit">Some</button>
+              <input type="text" name="operador2" />
+              <button type="submit">Soma</button>
             </form>
           </body>
         </html>"""
@@ -23,7 +23,7 @@ class StringGenerator(object):
     def soma(self, operador1=3, operador2=3):
         resultado =  int(operador1) + int(operador2)
         cherrypy.session['resultado'] = resultado
-        return some_string
+        return resultado
 
     @cherrypy.expose
     def display(self):
