@@ -1,6 +1,6 @@
 import random
 import string
-
+import os
 import cherrypy
 
 
@@ -30,6 +30,10 @@ class StringGenerator(object):
 
 if __name__ == '__main__':
     conf = {
+        'global': {
+        'server.socket_host': '0.0.0.0',
+        'server.socket_port': int(os.environ.get('PORT', 80)),
+        },
         '/': {
             'tools.sessions.on': True
         }
