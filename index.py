@@ -4,7 +4,7 @@ import os
 import cherrypy
 
 
-class StringGenerator(object):
+class calculadora(object):
     @cherrypy.expose
     def index(self):
         return """<html>
@@ -21,7 +21,7 @@ class StringGenerator(object):
 
     @cherrypy.expose
     def soma(self, operador1=3, operador2=3):
-        resultado =  int(operador1) + int(operador2)
+        resultado =  str((int(operador1) + int(operador2)))
         cherrypy.session['resultado'] = resultado
         return resultado
 
@@ -34,10 +34,10 @@ if __name__ == '__main__':
     conf = {
         'global': {
         'server.socket_host': '0.0.0.0',
-        'server.socket_port': int(os.environ.get('PORT', 80)),
+        'server.socket_port': int(os.environ.get('PORT', 8080)),
         },
         '/': {
             'tools.sessions.on': True
         }
     }
-    cherrypy.quickstart(StringGenerator(), '/', conf)
+    cherrypy.quickstart(calculadora(), '/', conf)
