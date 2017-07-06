@@ -4,4 +4,13 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-tut05.py	../m02/tut05.py	1;"	kind:file	line:1
+StringGenerator	../index.py	/^class StringGenerator(object):$/;"	kind:class	line:7
+cherrypy	../index.py	/^import cherrypy$/;"	kind:namespace	line:4
+conf	../index.py	/^    conf = {$/;"	kind:variable	line:32
+display	../index.py	/^    def display(self):$/;"	kind:member	line:27
+generate	../index.py	/^    def generate(self, length=8):$/;"	kind:member	line:21
+index	../index.py	/^    def index(self):$/;"	kind:member	line:9
+index.py	../index.py	1;"	kind:file	line:1
+os	../index.py	/^import os$/;"	kind:namespace	line:3
+random	../index.py	/^import random$/;"	kind:namespace	line:1
+string	../index.py	/^import string$/;"	kind:namespace	line:2

@@ -10,22 +10,24 @@ class StringGenerator(object):
         return """<html>
           <head></head>
           <body>
-            <form method="get" action="generate">
-              <input type="text" value="8" name="length" />
-              <button type="submit">Give it now.</button>
+            <form method="get" action="soma">
+              <input type="text" value="3" name="operador1" />
+              +
+              <input type="text" value="3" name="operador2" />
+              <button type="submit">Some</button>
             </form>
           </body>
         </html>"""
 
     @cherrypy.expose
-    def generate(self, length=8):
-        some_string = ''.join(random.sample(string.hexdigits, int(length)))
-        cherrypy.session['mystring'] = some_string
+    def soma(self, operador1=3, operador2=3):
+        resultado =  int(operador1) + int(operador2)
+        cherrypy.session['resultado'] = resultado
         return some_string
 
     @cherrypy.expose
     def display(self):
-        return cherrypy.session['mystring']
+        return cherrypy.session['resultado']
 
 
 if __name__ == '__main__':
