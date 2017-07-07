@@ -1,7 +1,10 @@
+import os
 import random
 import string
-import os
+
 import cherrypy
+
+from Calculadora import Calculadora
 
 
 class calculadora(object):
@@ -21,9 +24,12 @@ class calculadora(object):
 
     @cherrypy.expose
     def soma(self, operador1=3, operador2=3):
-        resultado =  str((int(operador1) + int(operador2)))
-        cherrypy.session['resultado'] = resultado
-        return resultado
+        calculadora = Calculadora()
+        resultado = calculadora.soma(int(operador1), int(operador2))
+        resutadoString = str(resultado)
+
+        cherrypy.session['resultado'] = resutadoString
+        return resutadoString
 
     @cherrypy.expose
     def display(self):
