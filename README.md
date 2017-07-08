@@ -3,4 +3,4 @@
 Exercicio Pos Uniritter
 =======================
 
-Uma breve descricao.
+Trabalho de integração contínua e deploy contínuo da disciplina Métodos Ágeis da UniRitter
